@@ -1,0 +1,558 @@
+<html lang="en"><head>
+
+    <title> Virtual Washington ARTCC</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="sbPQME8UgV2GAlQwvM14c61LTCohO9W9mMNzn4xX">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ZNY">
+
+    <link rel="shortcut icon" href="data:image/jpeg;base64,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">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/zny-logo-114px.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/zny-logo-72px.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/zny-logo-512px.png">
+    <link rel="apple-touch-icon" href="/img/zny-logo-512px.png">
+
+    <link href="//cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9ebaabd5b1.js" crossorigin="anonymous"></script><style media="all" id="fa-v4-font-face"></style>
+    <link href="/css/vendor/bootstrap.css" rel="stylesheet">
+    <link href="/css/globals/ZNYGlobals.css?v=2" rel="stylesheet">
+        
+
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js" integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
+    <script src="/js/vendor/jquery.dataTables.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/vendor/bootbox.min.js"></script>
+    <script src="/js/vendor/typeahead.min.js"></script>
+    
+    <script src="/js/globals/ZNYGlobals.js"></script>
+    <script src="/js/globals/ZNYModels.js?v=2"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment-with-locales.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-10-year-range.js"></script>
+    <script src="/js/vendor/cookie.js"></script>
+    
+        
+    <script src="https://nyartcc.instatus.com/en/7c3c62ab/widget/script.js"></script>
+    
+</head>
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top " role="navigation">
+
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse">
+
+            <ul class="nav navbar-nav layout-nav">
+
+                <li><a href="https://nyartcc.org"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> Controllers<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://vzdc.org/controllers/roster">Roster</a></li>
+                        <li><a href="https://www.vzdc.org/controllers/staff">ARTCC Staff</a></li>
+
+                                                    <li><a href="https://nyartcc.org/visit">Become a Visitor</a></li>
+                        
+                        <li><a href="https://nyartcc.org/controllers/top">Top Controllers</a></li>
+                        <li><a href="//wiki.nyartcc.org">Policy &amp; Procedures (Wiki, SOPs, LOAs, etc.)</a></li>
+                        <li><a href="https://nyartcc.org/downloads">Downloads (Sector Files &amp; Tools)</a></li>
+                        <li><a href="https://nyartcc.org/publications">Publications (ARTCC Documents &amp; Updates)</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-plane-departure" aria-hidden="true"> </i> Pilots <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://nyartcc.org/prc">Pilot Resource Center</a></li>
+                        <li><a href="https://nyartcc.org/charts">Airport Chart Database</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-clipboard" aria-hidden="true"></i> Publications<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="//wiki.nyartcc.org">Policies &amp; Procedures (Wiki, SOPs, LOAs, etc.)</a></li>
+                        <li><a href="https://nyartcc.org/downloads">Downloads (Sector Files &amp; Tools)</a></li>
+                        <li><a href="https://nyartcc.org/publications">Publications (ARTCC Documents &amp; Updates)</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="https://nyartcc.org/events"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</a></li>
+                <li><a href="https://nyartcc.org/feedback"><i class="fa fa-comments" aria-hidden="true"></i> Feedback</a></li>
+                
+
+                <li><a href="https://nyartcc.org/tickets/create"><i class="fa fa-ticket" aria-hidden="true"></i> Support</a></li>
+
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right hidden-xs layout-nav-icons">
+                            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="jumbotron layout-banner-jumbo">
+    <div class="layer">
+        <div class="container jumbotron layout-cont-jumbo">
+
+            
+            <div class="pull-left hidden-xs layout-jumbo-pl">
+                <div class="header-image">
+                                            <img src="https://www.vzdc.org/photos/logo.png" alt="NYARTCC Logo">
+                                    </div>
+                <div class="header-text">
+                    
+                    
+                </div>
+            </div>
+
+            
+            <div class="layout-jumbo-pr">
+                <div class="layout-jumbo-online-table">
+                    <div class="facilityRow">
+                        <div class="facility">DC Center</div>
+                        <div class="facilityStatus ">OFFLINE</div>
+                    </div>
+                    <div class="facilityRow">
+                        <div class="facility">Potomac Tracon</div>
+                        <div class="facilityStatus ">
+                            
+                            
+                            
+                                                            OFFLINE
+                                                    </div>
+                    </div>
+                    <div class="facilityRow">
+                        <div class="facility">IAD Airport</div>
+                        <div class="facilityStatus ">OFFLINE</div>
+                    </div>
+                    <div class="facilityRow">
+                        <div class="facility">DCA Airport</div>
+                        <div class="facilityStatus ">OFFLINE</div>
+                    </div>
+                    <div class="facilityRow">
+                        <div class="facility">BWI Airport</div>
+                        <div class="facilityStatus ">OFFLINE</div>
+                    </div>
+                    <div class="facilityRow">
+                        <div class="facility">RDU Airport</div>
+                        <div class="facilityStatus ">OFFLINE</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container ">
+
+    
+    <div class="row">
+        <ol class="breadcrumb layout-jumbo-bc">
+            <li><a href="https://nyartcc.org">Washington ARTCC</a></li>
+            <li><a href="https://nyartcc.org">Home</a></li>
+        </ol>
+    </div>
+
+    
+    <div class="row">
+        <div class="col-md-9">
+
+            
+            
+            
+            
+            <div class="alert alert-success fade in" id="ajaxNotice" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <strong class="notice-heading"></strong> <span class="notice-content"></span>
+            </div>
+
+            
+            
+            
+            
+            
+
+            
+            
+    <style>
+
+        #twitchEmbed iframe {
+            margin-bottom: -5px;
+        }
+
+        #twitchLive img {
+            height: 2.5em;
+            float: left;
+            margin-right: 1em;
+        }
+
+        .clearfix {
+            height: 20px;
+            clear: both;
+        }
+
+        .prd-field input[type="text"] {
+            text-transform: uppercase;
+        }
+        .avatar {
+            background-color: #fff;
+            border: 1px solid #bbb;
+            padding: 2px;
+            float: left;
+            margin: -.2em 1em -1em 0;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            font-weight: 300;
+        }
+
+        .name {
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        .namexs {
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        .avatar {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .list-group-item-success {
+            color: #000;
+            background-color: #f3f3f3;
+        }
+
+        .list-group-item-success>.pull-left {
+            width: 90%;
+        }
+
+        .list-group-item-success>.pull-right {
+            width: 10%;
+        }
+
+        .list-group-item-success>.col-xs-12>.pull-right>.fa-trophy {
+            font-size: 75px;
+            color: #e1e1e1;
+            padding-top: 7px;
+        }
+
+        .ic {
+            font-size: 15px;
+        }
+
+        .tooltip-inner {
+            font-weight: 300;
+        }
+
+    </style>
+
+    <div class="panel panel-default" style="margin-bottom: 0; position:relative;">
+         <div id="banner" class="carousel slide" data-ride="carousel" data-interval="6000">
+            <div class="carousel-inner">
+
+                
+                                <div class="item active">
+                                            <div class="imgoverlay">
+                            <img src="https://zny-uploads.s3.amazonaws.com/images-banners/5MO5uU2e18t38HV1oYzVabUo5aOTF9ZPxU84Uca2.png" alt="..." width="100%" style="z-index: 1">
+                        </div>
+
+                                    </div>
+                                <div class="item">
+                                            <div class="imgoverlay">
+                            <img src="https://zny-uploads.s3.amazonaws.com/images-banners/nRbc9XtwITSz9bzUumzeqPoxJAsqGAgGDeCKRRlQ.png" alt="..." width="100%" style="z-index: 1">
+                        </div>
+
+                                    </div>
+                                <div class="item">
+                                            <div class="imgoverlay">
+                            <img src="https://zny-uploads.s3.amazonaws.com/images-banners/H1tx6pn6AMEBnCrAr8qwUN4z9gX7v6BBbYJ4Xww7.png" alt="..." width="100%" style="z-index: 1">
+                        </div>
+
+                                    </div>
+                                <div class="item">
+                                            <div class="imgoverlay">
+                            <img src="https://zny-uploads.s3.amazonaws.com/images-banners/upAMRlDZoUUDHjcnfOGDIoX2k8fRbD8J6NclWUej.png" alt="..." width="100%" style="z-index: 1">
+                        </div>
+
+                                    </div>
+                                <div class="item">
+                                            <div class="imgoverlay">
+                            <img src="https://zny-uploads.s3.us-east-1.amazonaws.com/images/JFK%20Airport%20Small.png" alt="..." width="100%" style="z-index: 1">
+                        </div>
+
+                                    </div>
+                                <div class="item">
+                                            <div class="imgoverlay">
+                            <img src="https://zny-uploads.s3.us-east-1.amazonaws.com/images/Empire%20State%20Building%20Small.png" alt="..." width="100%" style="z-index: 1">
+                        </div>
+
+                                    </div>
+                                <div class="item">
+                                            <div class="imgoverlay">
+                            <img src="https://zny-uploads.s3.amazonaws.com/images-banners/aGJeJ7365ZEoCrTyezNm2xFat4GB9koE4SjGgzJV.png" alt="..." width="100%" style="z-index: 1">
+                        </div>
+
+                                    </div>
+                
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#banner" data-slide="prev" style="background:none">
+            <span class="fa fa-chevron-left" style="margin-top:160%" aria-hidden="true"></span>
+        </a>
+        <a class="right carousel-control" href="#banner" data-slide="next" style="background:none">
+            <span class="fa fa-chevron-right" style="margin-top:160%" aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Announcements</h3>
+                    </div>
+        <div class="list-group">
+                                    
+                                    <a class="list-group-item">
+                <table width="100%">
+                    <tbody><tr width="100%">
+                        <td width="10%" class="hidden-xs"><span class="label label-default" style="background-color: #999;color:#fff;font-weight:600">09/18/2023</span></td>
+                        <td width="90%">WX (Wilbert Molina) has received the New York Center certification.</td>
+                    </tr>
+                </tbody></table>
+            </a>
+                        <a class="list-group-item">
+                <table width="100%">
+                    <tbody><tr width="100%">
+                        <td width="10%" class="hidden-xs"><span class="label label-default" style="background-color: #999;color:#fff;font-weight:600">09/17/2023</span></td>
+                        <td width="90%">Look out, BQ (1401588) is now S2 certified!</td>
+                    </tr>
+                </tbody></table>
+            </a>
+                        <a class="list-group-item">
+                <table width="100%">
+                    <tbody><tr width="100%">
+                        <td width="10%" class="hidden-xs"><span class="label label-default" style="background-color: #999;color:#fff;font-weight:600">09/17/2023</span></td>
+                        <td width="90%">Congrats to AP (Matthew Stewart) for being promoted to KJFK Ground.</td>
+                    </tr>
+                </tbody></table>
+            </a>
+                        <a class="list-group-item">
+                <table width="100%">
+                    <tbody><tr width="100%">
+                        <td width="10%" class="hidden-xs"><span class="label label-default" style="background-color: #999;color:#fff;font-weight:600">09/17/2023</span></td>
+                        <td width="90%">Look out, AP (Matthew Stewart) is now KJFK Ground certified!</td>
+                    </tr>
+                </tbody></table>
+            </a>
+                        <a class="list-group-item">
+                <table width="100%">
+                    <tbody><tr width="100%">
+                        <td width="10%" class="hidden-xs"><span class="label label-default" style="background-color: #999;color:#fff;font-weight:600">09/16/2023</span></td>
+                        <td width="90%">Look out, KW (Kevin) is now KJFK Departure certified!</td>
+                    </tr>
+                </tbody></table>
+            </a>
+                                </div>
+    </div>
+    
+
+    <div class="panel panel-default hidden-xs">
+        <div class="panel-heading">
+            <h3 class="panel-title">Pilot Resources</h3>
+        </div>
+        <div class="panel-body">
+            <table width="100%">
+                <tbody><tr>
+                    <td width="40%">
+                        <h4>Preferred Route Search</h4>
+
+                        <form method="GET" action="https://nyartcc.org/prd" accept-charset="UTF-8" class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input class="form-control prd-field" placeholder="Departure Airport" required="required" pattern="[A-Za-z]{3,4}" name="from" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input class="form-control prd-field" placeholder="Arrival Airport" required="required" pattern="[A-Za-z]{3,4}" name="to" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input class="btn btn-sm btn-default font col-sm-12" type="submit" value="Search">
+                            </div>
+                        </div>
+                        </form>
+                    </td>
+                    
+                    
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+
+    
+
+        </div>
+
+        
+        <div class="col-md-3">
+
+            
+                        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Controller Actions</h3>
+                </div>
+                <div class="panel-body">
+                    <button class="btn btn-sm btn-primary font col-sm-12" onclick="window.location.href='http://nyartcc.org/login/init?returnTo=http%3A%2F%2Fnyartcc.org">
+                        <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                        Login via VATSIM
+                    </button>
+                </div>
+            </div>
+            
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Who's Online?</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="rightPanelMaxHeight" style="max-height: 625px;">
+                        
+                            
+                            No controllers currently online.                        <table class="whosOnline"></table>
+                    </div>
+
+                </div>
+            </div>
+
+
+            
+            
+            <script type="application/javascript">
+                const container = $('#expectedAtc-scrollContainer');
+
+                if (container.get(0).scrollHeight > container.get(0).clientHeight) {
+
+                    container.closest('.panel-body').addClass('sidebarAtc-overflowed')
+                }
+            </script>
+
+
+            
+                            
+            
+
+            
+            
+
+            
+            
+
+            
+                        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Quick Links</h3>
+                </div>
+                <div class="list-group">
+                    <a href="https://nyartcc.org/join" class="list-group-item"><i class="fas fa-file-signature" aria-hidden="true"></i> Join ZNY </a>
+                    <a href="https://nyartcc.org/visit" class="list-group-item"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Become a Visitor</a>
+                    
+                    <a href="//vatusa.net" target="_blank" class="list-group-item"><i class="fas fa-flag-usa" aria-hidden="true"></i> VATUSA</a>
+                    <a href="//vatsim.net" target="_blank" class="list-group-item"><i class="fas fa-globe-europe" aria-hidden="true"></i> VATSIM</a>
+                </div>
+            </div>
+            
+
+            
+            <a href="https://nyartcc.org/tickets/create" class="btn btn-default" style="display: block; ">Support</a>
+
+            
+                        <br>
+            <iframe src="https://status.nyartcc.org/embed-status/7c3c62ab/light-sm" height="61" frameborder="0" scrolling="no" style="border: none; width:100%">
+            </iframe>
+            
+
+            
+            <br>
+            <div class="center" style="margin-top: 1em; margin-bottom: 1em;">
+                
+                
+                
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    
+    <footer>
+        <div class="pull-left" style="margin-top:-10px">
+            <h4>© Copyright 2023 Virtual Washington ARTCC Inc, All Rights Reserved. |
+                <a href="https://zny-uploads.s3.us-east-1.amazonaws.com/documents/ZNY-Privacy_Policy.pdf">Privacy Policy</a> | <a href="https://github.com/Vainnor/vZDC">GitHub</a> | <a href="https://nyartcc.org/feedback">Feedback</a> | About
+            </h4>
+            <div class="clearfix"></div>
+            
+            
+            
+        </div>
+        
+        <div class="clearfix"></div>
+    </footer>
+</div>
+
+
+<div class="modal fade" id="lgbtModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body></html>
